@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Book Generator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Story Book Generator</h1>
+        <p class="text-center">Generate story books for your little one with just a click. Enter the prompt you want and let AI do the rest.</p>
+        
+        <form id="storyForm">
+            <div class="form-group">
+                <textarea id="prompt" name="prompt" rows="4" class="form-control" placeholder="Enter your story prompt here"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="number" id="pages" name="pages" class="form-control" placeholder="Number of pages">
+            </div>
+            <div class="btn-container">
+               <button type="submit" class="btn btn-primary">Generate Story</button>
+            </div>
+        </form>
+        
+        <div id="loading" class="loader"></div>
+        <p id="loadingCaption">Processing your request...</p>
+        <p id="storyLink">Here's your <a href="" target="_blank">story</a>.</p>
+        
+        <p id="storyLink" class="text-center mt-4">Here's your <a href="" target="_blank">story</a>.</p>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

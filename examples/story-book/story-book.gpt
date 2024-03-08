@@ -5,7 +5,7 @@ args: pages: The number of pages to generate
 
 Do the following steps sequentially:
 
-1. Create the `pages` directory if it does not already exist.
+1. Create the `pages` directory inside the `templates` directory if it does not already exist.
 2. If ${story} is a prompt and not a complete children's story, call story-writer
    to write a story based on the prompt.
 3. Take ${story} and break it up into ${pages} logical "pages" of text.
@@ -37,7 +37,7 @@ Do the following steps sequentially:
       }
    </style>
    ```
-6. Edit the "pages" variable array in index.html to serve the pages you created. Do not 
+6. Edit the "pages" variable array in story.html to serve the pages you created. Do not 
    edit anything else. Do not edit the page select field.
 
 ---
@@ -49,7 +49,7 @@ Write a story with a tone for children based on ${prompt}.
 
 ---
 name: story-illustrator
-tools: ../../../image-generation/tool.gpt
+tools: ./image-generation/tool.gpt
 description: Generates a illustration for a children's story
 args: text: The text of the page to illustrate
 
